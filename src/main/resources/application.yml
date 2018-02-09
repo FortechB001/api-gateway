@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: zuul-api-gateway
+
+server:
+  port: 8081
+
+zuul:
+  prefix: /api
+  routes:
+    product-service:
+      path: /product-service/**
+      url: http://localhost:8083
+    stock-service:
+      path: /stock-service/**
+      url: http://localhost:8084
+    estimation-service:
+      path: /estimation-service/**
+      url: http://localhost:8085
+    order-service:
+      path: /order-service/**
+      url: http://localhost:8086
