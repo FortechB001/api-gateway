@@ -7,10 +7,11 @@ server:
 
 zuul:
   prefix: /api
+  #ignoredServices: '*'
   routes:
-    product-service:
-      path: /product-service/**
-      url: http://localhost:8083
+#    product-service:
+#      path: /product-service/**
+#      url: http://localhost:8083
     stock-service:
       path: /stock-service/**
       url: http://localhost:8084
@@ -26,6 +27,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-                    defaultZone: http://localhost:8082/eureka
+      defaultZone: http://localhost:8082/eureka
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
