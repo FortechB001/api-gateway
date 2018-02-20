@@ -2,25 +2,25 @@ package com.fortech.apigateway.controller;
 
 import com.fortech.apigateway.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:8080")
-@RequestMapping(path = "/api/product-service/product")
 public class ProxyProductController {
 
     @Autowired
     private ProductService productService;
 
-    @GetMapping(path = "/all")
+    @GetMapping(path = "/api/product-service-all/product/all")
     public List getAllProducts() {
         return productService.getAllProducts();
     }
 
-    @PostMapping(value = "/add")
+/*    @PostMapping(value = "/add")
     public ResponseEntity<?> addStock(@RequestParam(name = "name") String name,
                                       @RequestParam(name = "description", required = false) String description) {
         return productService.addStock(name, description);
@@ -35,5 +35,5 @@ public class ProxyProductController {
     @DeleteMapping(path = "/delete")
     public ResponseEntity<?> deleteProduct(@RequestParam(name = "productId") String productId) {
         return productService.deleteProduct(productId);
-    }
+    }*/
 }

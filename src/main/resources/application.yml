@@ -9,18 +9,22 @@ zuul:
   prefix: /api
   #ignoredServices: '*'
   routes:
-#    product-service:
-#      path: /product-service/**
+    product-service:
+      path: /product-service/**
 #      url: http://localhost:8083
+      serviceId: PRODUCT-SERV
     stock-service:
       path: /stock-service/**
-      url: http://localhost:8084
+#      url: http://localhost:8084
+      serviceId: STOCK-SERV
     estimation-service:
       path: /estimation-service/**
-      url: http://localhost:8085
+#      url: http://localhost:8085
+      serviceId: ESTIMATION-SERV
     order-service:
       path: /order-service/**
-      url: http://localhost:8086
+#      url: http://localhost:8086
+      serviceId: ORDER-SERV
 
 eureka:
   client:

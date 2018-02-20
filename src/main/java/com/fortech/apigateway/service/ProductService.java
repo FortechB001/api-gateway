@@ -27,10 +27,10 @@ public class ProductService {
     public List productAllFallback() {
 
         List<Product> products = new ArrayList<>();
-        products.add(new Product("1", "Bananas", "Banana Description"));
-        products.add(new Product("2", "Cherys", "Cherys Description"));
-        products.add(new Product("3", "Melon", "Melon Description"));
-        products.add(new Product("4", "Lime", "Melon Description"));
+        products.add(new Product("5a7c51fc745cd8176cd62a2c", "Bananas", "Banana Description"));
+        products.add(new Product("5a7c5212745cd8176cd62a2d", "Cherys", "Cherys Description"));
+        products.add(new Product("5a7c5220745cd8176cd62a2e", "Melon", "Melon Description"));
+        products.add(new Product("5a7c55d6745cd834802b4b30", "Lime", "Melon Description"));
         return products;
     }
 
